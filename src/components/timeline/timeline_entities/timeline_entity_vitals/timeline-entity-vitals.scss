@@ -1,0 +1,89 @@
+.TimelineEntityVitals {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  &__content {
+    padding: 16px 24px 24px 24px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    text-align: right;
+    color: #E2C80E;
+    padding-top: 3px;
+  }
+
+  &__time {
+    padding-top: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-align: right;
+  }
+
+  &__specialist {
+    &-card {
+      display: flex;
+
+      &-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
+      }
+
+      &-info {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-name {
+        font-size: 14px;
+        color: #292929;
+      }
+
+      &-role {
+        font-size: 12px;
+        color: #6D859E;
+      }
+    }
+  }
+
+  &__section {
+    & + & {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+
+  &__label {
+    color: #5D6C7C;
+    font-size: 15px;
+    flex-shrink: 0;
+    flex-basis: 40%;
+  }
+
+  &__value {
+    font-size: 15px;
+    color: #292929;
+    flex-basis: 60%;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "specialists": [
+    {
+      "country": "United Arab Emirates",
+      "specialist": {
+        "avatarUrl": "https://storage.googleapis.com/dronline-prod/images/patients/Man.png",
+        "firstName": "Ben",
+        "id": 0,
+        "lastName": "Uncle",
+        "medicalCategories": [
+          "Dermatology"
+        ],
+        "package": 2,
+        "title": 3,
+        "type": 3
+      }
+    },
+    {
+      "country": "United Arab Emirates",
+      "specialist": {
+        "avatarUrl": "https://storage.googleapis.com/dronline-prod/images/patients/Man.png",
+        "firstName": "Jane",
+        "id": 1,
+        "lastName": "Doe",
+        "medicalCategories": [
+          "Dermatology"
+        ],
+        "package": 1,
+        "title": 2,
+        "type": 3
+      }
+    }
+  ]
+}

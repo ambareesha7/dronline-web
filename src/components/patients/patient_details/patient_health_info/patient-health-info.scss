@@ -1,0 +1,42 @@
+.PatientHealthInfo {
+  &__block {
+    background: #FFFFFF;
+    border-radius: 0 0 4px 4px;
+
+    & + & {
+      margin-top: 32px;
+      border-radius: 4px;
+
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      padding: 0 24px;
+
+      &-button {
+        height: 32px;
+      }
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #4A4A4A;
+    }
+
+    &-content {
+      padding: 0 24px;
+    }
+  }
+
+  &__section-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6d859e;
+    text-transform: uppercase;
+    padding: 12px 0;
+  }
+}

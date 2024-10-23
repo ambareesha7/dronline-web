@@ -1,0 +1,73 @@
+.TimelineEntityCommentsModal {
+  &__content {
+    margin: 130px auto 88px auto;
+    max-width: calc(100% - 32px);
+    width: 970px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__section {
+    max-width: 570px;
+    width: 100%;
+    padding: 8px 0 40px 0;
+
+    &-header {
+      padding: 22px 0;
+    }
+
+    &-title {
+      color: #4a4a4a;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-content {
+      padding-top: 8px;
+    }
+  }
+
+  &__comment {
+    margin-bottom: 16px;
+    background-color: #fff;
+
+    &.highlight {
+      animation: highlight 1s 3 ease-in-out;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    &-date {
+      color: rgb(109, 133, 158);
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  &__load-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+  }
+}
+
+@keyframes highlight {
+  0%, 100%
+  {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+  50%
+  {
+    background-color: #eef8ff;
+    box-shadow: 0 0 2px 6px #eef8ff;
+  }
+}

@@ -1,0 +1,58 @@
+.PatientRecordHpiUpdate {
+  &__section {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 16px 32px;
+
+    &-header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    &-title {
+      color: #4A4A4A;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-content {
+      padding: 0 40px 24px 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    margin-left: 36px;
+    border-radius: 4px;
+    padding: 16px 14px 16px 19px;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+
+    &:before {
+      content: attr(data-index);
+      position: absolute;
+      left: -36px;
+      top: 16px;
+      color: #6d859e;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0.19px;
+      padding: 5px 7px;
+      background-color: #f5fbff;
+      border-radius: 50%;
+    }
+  }
+
+  &__footer-content {
+    width: 470px;
+    margin: 0;
+  }
+}

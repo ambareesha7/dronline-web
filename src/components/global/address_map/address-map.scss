@@ -1,0 +1,20 @@
+.AddressMap {
+  &__map {
+    height: 256px;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  &__address {
+    & .form-label {
+      color: #6d859e;
+      font-weight: 500;
+    }
+
+    & .form-field {
+      color: #6d859e;
+    }
+  }
+}

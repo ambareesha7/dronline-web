@@ -1,0 +1,174 @@
+.PatientRecordMedicalSummary {
+  &__wrapper {
+    background: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__header {
+    height: 64px;
+    font-size: 16px;
+    color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+  }
+
+  &__add {
+    height: 36px;
+  }
+
+  &__tabs {
+    display: flex;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }
+
+  &__tab {
+    flex-grow: 1;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 64px;
+    text-align: center;
+    color: #A6A6A6;
+    background-color: #FFFFFF;
+    transition: background-color .22s ease-in-out;
+    &:before {
+      content: '';
+      height: 0;
+      background-color: transparent;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      transition: all .35s ease;
+    }
+    &:hover {
+      &:before {
+        height: 2px;
+        background-color: #53A7FC;
+        right: 0;
+        left: 0;
+      }
+    }
+    &.active {
+      color: #1877DA;
+      &:before {
+        background-color: #53A7FC;
+        height: 2px;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__entity {
+    padding: 24px;
+
+    & + & {
+      border-top: 1px solid #E1E1E1;
+    }
+
+    &-specialist-card {
+      display: flex;
+
+      &-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
+
+        &.icon {
+          background-color: rgba(35, 206, 134, .14);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #23ce86;
+        }
+      }
+
+      &-info {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: initial;
+
+        &.no-provider {
+          color: #292929;
+          font-size: 14px;
+          justify-content: center;
+        }
+      }
+
+      &-name {
+        font-size: 14px;
+        color: #292929;
+      }
+
+      &-role {
+        font-size: 12px;
+        color: #6D859E;
+        text-transform: capitalize;
+      }
+    }
+
+    &__outdated-tag {
+      display: flex;
+      text-align: right;
+      background-color: #e5e5e5;
+      color: #6c6c6c;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 4px;
+      height: 20px;
+      padding: 0 17px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__section {
+    padding: 24px 0;
+
+    &-title {
+      font-size: 13px;
+      color: #6D859E;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__row {
+    padding-top: 16px;
+  }
+
+  &__label {
+    font-size: 15px;
+    color: #5D6C7C;
+    width: 137px;
+  }
+
+  &__value {
+    font-size: 15px;
+    color: #292929;
+    width: calc(100% - 137px);
+
+    &__list-item {
+      margin-bottom: 10px;
+    }
+  }
+}

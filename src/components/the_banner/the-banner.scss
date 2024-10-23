@@ -1,0 +1,46 @@
+.TheBanner {
+  &__wrapper {
+    position: fixed;
+    top: 80px;
+    left: 207px;
+    right: 0;
+    z-index: 1001;
+    width: 625px;
+    background-color: #fff;
+    transition: background-color .22s ease-in-out;
+    border: 1px solid rgba(86, 169, 255, 1);
+    padding: 16px 24px 16px 24px;
+    border-radius: 4px;
+    transition: transform .22s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__container {
+   display: flex;
+  }
+
+  &__text_wrapper {
+    margin: auto auto auto 20px;
+  }
+
+  &__step-circle-wrapper {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(86, 169, 255, 1);
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(109, 133, 158, 1);
+    margin-top: 8px;
+  }
+  
+}

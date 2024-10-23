@@ -1,0 +1,15 @@
+.TimelineInviteFormInvitation {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+
+  &__reset {
+    font-size: 12px;
+    color: #ED4856;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

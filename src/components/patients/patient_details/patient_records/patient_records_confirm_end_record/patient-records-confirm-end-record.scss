@@ -1,0 +1,52 @@
+.PatientRecordsConfirmEndRecord {
+
+  &__wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__header {
+    height: 262px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/static/images/modal-header-grey-mask.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-icon {
+      width: 155px;
+    }
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #292929;
+    text-align: center;
+    padding: 16px 24px;
+  }
+
+  &__description {
+    font-size: 15px;
+    color: #292929;
+    text-align: center;
+    line-height: 22px;
+    padding: 32px;
+  }
+
+  &__confirm, &__cancel {
+    height: 36px;
+  }
+}

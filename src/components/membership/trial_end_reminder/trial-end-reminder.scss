@@ -1,0 +1,25 @@
+.TrialEndReminder {
+  &__container {
+    display: flex;
+    top: 0;
+    z-index: 10000;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    position: fixed;
+    left: 185px;
+    right: 0;
+    height: 65px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  }
+
+  & + .TheNavbar__wrapper {
+    top: 20px;
+  }
+
+  &__link {
+    color: #4496E9;
+    text-decoration: none;
+  }
+}
+  

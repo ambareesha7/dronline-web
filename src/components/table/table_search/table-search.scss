@@ -1,0 +1,42 @@
+.TableSearch {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px 0 10px 24px;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+    transition-delay: .6s;
+    border-bottom: 1px solid #F9F9F9;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 525px;
+  }
+
+  &__actions {
+    flex-grow: 0;
+  }
+
+  &__submit {
+    height: 48px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #6d859e;
+    cursor: pointer;
+
+    &.inactive {
+      color: #4496e9;
+      cursor: default;
+    }
+  }
+}

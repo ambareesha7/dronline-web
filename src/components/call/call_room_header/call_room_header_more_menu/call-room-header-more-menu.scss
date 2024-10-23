@@ -1,0 +1,50 @@
+.CallRoomHeaderMoreMenu {
+  &__wrapper {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+  }
+
+  &__trigger {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  &__dropdown {
+    width: 174px;
+    position: absolute;
+    background-color: #FFF;
+    border: 1px solid #E8E8E8;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.50);
+    border-radius: 3px;
+    transition-property: transform, opacity;
+    transition-duration: .22s, .2s;
+    transition-timing-function: ease-in-out;
+    transform-origin: 95% 0;
+    right: 40px;
+    top: 0;
+  }
+
+  &__action {
+    font-size: 14px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    padding: 0 16px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    user-select: none;
+    transition: background-color .22s ease-in-out;
+
+    &:hover {
+      background-color: #B2B2B2;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+}

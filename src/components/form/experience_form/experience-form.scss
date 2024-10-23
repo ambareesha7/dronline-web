@@ -1,0 +1,33 @@
+.ExperienceForm {
+  &__wrapper {
+    & + & {
+      padding-top: 28px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-transform: uppercase;
+  }
+
+  &__remove {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ED4856;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__col-half {
+    flex-basis: 50%;
+  }
+}

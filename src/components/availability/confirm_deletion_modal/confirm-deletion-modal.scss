@@ -1,0 +1,44 @@
+.ConfirmDeletionModal {
+
+  &__wrapper {
+    padding: 24px;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #ED4856;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    font-size: 15px;
+    color: #292929;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  &__warn {
+    font-size: 12px;
+    color: #6D859E;
+    letter-spacing: .2px;
+    margin-bottom: 16px;
+    display: flex;
+
+    &-icon {
+      font-size: 16px;
+      color: #ED4856;
+      margin-right: 8px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    padding-top: 16px;
+  }
+
+  &__action {
+    width: 50%;
+    height: 36px;
+    font-size: 15px;
+  }
+}

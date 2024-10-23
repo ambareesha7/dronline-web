@@ -1,0 +1,115 @@
+@import "./src/stylesheets/breakpoints";
+
+html[dir=ltr] .TheNavbar {
+  &__brand,
+  &__nav-container {
+    .form-link--green {
+      margin-left: 10px;
+    }
+  }
+
+  &__brand {
+    @media (max-width: $bp-xs-min) {
+      margin-left: 14px;
+    }
+  }
+
+  &__logo {
+    margin-right: 14px;
+  }
+
+  &__nav-link {
+    padding-left: 12px;
+  }
+}
+html[dir=rtl] .TheNavbar {
+  &__brand,
+  &__nav-container {
+    .form-link--green {
+      margin-right: 10px;
+    }
+  }
+
+  &__brand {
+    @media (max-width: $bp-xs-min) {
+      margin-right: 14px;
+    }
+  }
+
+  &__logo {
+    margin-left: 14px;
+  }
+
+  &__nav-link {
+    padding-right: 12px;
+  }
+}
+
+.TheNavbar {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    height: 80px;
+    background-color: #F9F9F9;
+    transition: background-color .22s ease-in-out;
+
+    &.filled {
+      background: #FFFFFF;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__brand,
+  &__nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__brand {
+    width: 185px;
+    padding: 27px 0 27px 24px;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, .1);
+  }
+
+  &__wrapper.filled &__brand {
+    box-shadow: none;
+  }
+
+  &__nav-container {
+    flex-grow: 1;
+    padding: 0 23px 0 22px;
+  }
+
+  &__logo {
+    height: 26px;
+  }
+
+  &__nav-link {
+    font-size: 12px;
+    color: #4A4A4A;
+    letter-spacing: -.27px;
+    text-decoration: none;
+  }
+
+  &__view-header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0 14px 0;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+}
+
+.authorized .TheNavbar__brand {
+  background: #FFFFFF;
+}

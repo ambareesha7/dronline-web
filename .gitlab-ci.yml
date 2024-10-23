@@ -1,0 +1,95 @@
+stages:
+  - build
+  - manual-deploy
+  - deploy
+
+variables:
+  REGISTRY_NAME: registry.appunite.com
+  IMAGE_NAME: registry.appunite.com/dronline-images/dronline-web
+  PROD_IMAGE_NAME: registry.appunite.com/dronline-images/dronline-web-prod
+
+###################################
+############## BUILD ##############
+###################################
+build:
+  image: docker:18 # Change to docker:stable when this error is gone: (client version 1.40 is too new. Maximum supported API version is 1.39)
+  stage: build
+  script:
+  - docker version
+  - docker build --build-arg NODE_ENV=testing -t "$IMAGE_NAME:${CI_COMMIT_SHA:0:8}" .
+  - docker login -u admin -p $CI_BUILD_TOKEN $REGISTRY_NAME
+  - docker push "$IMAGE_NAME:${CI_COMMIT_SHA:0:8}"
+  tags:
+    - privileged
+  except:
+    - tags
+
+##############################################
+############## PRODUCTION BUILD ##############
+##############################################
+build:production:
+  image: docker:18 # Change to docker:stable when this error is gone: (client version 1.40 is too new. Maximum supported API version is 1.39)
+  stage: build
+  script:
+  - docker version
+  - docker build --build-arg NODE_ENV=production -t "$PROD_IMAGE_NAME:$CI_COMMIT_REF_NAME" .
+  - docker login -u admin -p $CI_BUILD_TOKEN $REGISTRY_NAME
+  - docker push "$PROD_IMAGE_NAME:$CI_COMMIT_REF_NAME"
+  tags:
+    - privileged
+  only:
+    - tags
+
+###########################################
+############## MANUAL DEPLOY ##############
+###########################################
+manual_deploy:
+  image: lwolf/kubectl_deployer:latest
+  stage: manual-deploy
+  environment:
+    name: staging
+  script:
+    - kubectl config use-context gitlab-deploy
+    - kubectl set image deployment dronline-web dronline-web="$IMAGE_NAME:${CI_COMMIT_SHA:0:8}" --record
+  tags:
+    - k8s
+  except:
+    - tags
+  when: manual
+
+#################################################
+############## AUTO STAGING DEPLOY ##############
+#################################################
+deploy:
+  image: lwolf/kubectl_deployer:latest
+  stage: deploy
+  environment:
+    name: staging
+  script:
+    - kubectl config use-context gitlab-deploy
+    - kubectl set image deployment dronline-web dronline-web="$IMAGE_NAME:${CI_COMMIT_SHA:0:8}" --record
+  tags:
+    - k8s
+  only:
+    - master
+
+####################################################
+############## AUTO PRODUCTION DEPLOY ##############
+####################################################
+deploy:production:
+  image: lwolf/kubectl_deployer:latest
+  stage: deploy
+  environment:
+    name: production
+  script:
+    - echo "$GKE_CA_CERT" > gke_ca.cert
+    - kubectl config set-cluster prod-deploy --server="$GKE_SERVER" --certificate-authority=gke_ca.cert
+    - kubectl config set-context prod-deploy --cluster=prod-deploy
+    - kubectl config set-credentials service-account --token="$GKE_TOKEN"
+    - kubectl config set-context prod-deploy --namespace="$GKE_NAMESPACE" --user=service-account
+    - kubectl config use-context prod-deploy
+    - kubectl set image deployment dronline-web dronline-web="$PROD_IMAGE_NAME:$CI_COMMIT_REF_NAME" --record
+  tags:
+    - k8s
+  only:
+    - tags

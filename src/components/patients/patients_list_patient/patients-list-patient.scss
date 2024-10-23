@@ -1,0 +1,67 @@
+.PatientsListPatient {
+  &__wrapper {
+    cursor: pointer;
+    user-select: none;
+    transition: transform .16s ease-out, opacity .2s ease-out, background-color .2s ease-in-out;
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        transition-delay: calc(#{$i * .02}s);
+      }
+    }
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__patient {
+    &-photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin-right: 16px;
+      position: relative;
+
+      &__is-insured-badge {
+        position: absolute;
+        font-size: 12px;
+        bottom: -3px;
+        right: -3px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-title {
+      text-transform: capitalize;
+    }
+  }
+
+  &__action {
+    color: #4496e9;
+    font-size: 24px;
+    cursor: pointer;
+
+    &.unavailable {
+      pointer-events: none;
+      opacity: .4;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

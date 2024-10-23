@@ -1,0 +1,117 @@
+.CallRoom {
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    z-index: 1002;
+    box-shadow: 0 5px 6px 6px rgba(0,0,0,0.50);
+    background-color: #F8F8F8;
+    overflow: hidden;
+    display: flex;
+    will-change: top, left, width, height;
+
+    &.minimized {
+      width: 360px;
+      height: 196px;
+      top: 140px;
+      left: 50%;
+      border-radius: 4px;
+      cursor: move;
+    }
+
+    &.resizing {
+      transition-property: top, left, width, height;
+      transition-duration: .22s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  &__wrapper.minimized &__participants,
+  &__wrapper.resizing &__participants {
+    display: none;
+  }
+
+  &__main-video {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.local {
+      transform: scaleX(-1);
+    }
+
+    & > video {
+      min-height: 100%;
+      max-height: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &__participants {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    left: 5px;
+    text-align: start;
+    padding: 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    direction: rtl;
+    overflow: auto;
+    cursor: pointer;
+    transform: translate(0);
+    opacity: 1;
+    transition: transform .22s ease-in-out, opacity .2s ease-in-out;
+
+    &.hidden {
+      opacity: 0;
+      transform: translate(-100%, 100%);
+    }
+
+    & .participant {
+      height: 89px;
+      border-radius: 3px;
+      overflow: hidden;
+      pointer-events: none;
+      box-shadow: 0 3px 6px 3px rgba(0,0,0,0.50);
+
+      &.local {
+        transform: scaleX(-1);
+      }
+
+      & > video {
+        max-height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

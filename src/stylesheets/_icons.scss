@@ -1,0 +1,39 @@
+[class*="icon_"] {
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.icon {
+  &_medications {background-image: url('./stylesheets/icons/assign-medications.svg');}
+  &_add-user {background-image: url('./stylesheets/icons/add-user.svg');}
+  &_examination {background-image: url('./stylesheets/icons/examination.svg');}
+  &_schedule {background-image: url('./stylesheets/icons/schedule.svg');}
+  &_call {background-image: url('./stylesheets/icons/call.svg');}
+  &_call-end {background-image: url('./stylesheets/icons/call-end.svg');}
+  &_dispatch {background-image: url('./stylesheets/icons/dispatch-tu.svg');}
+  &_vitals {background-image: url('./stylesheets/icons/vitals.svg');}
+  &_dashboard {background-image: url('./stylesheets/icons/dashboard.svg');}
+  &_team {background-image: url('./stylesheets/icons/team.svg');}
+  &_calendar {background-image: url('./stylesheets/icons/calendar.svg');}
+  &_emr {background-image: url('./stylesheets/icons/emr.svg');}
+  &_star {background-image: url('./stylesheets/icons/star.svg');}
+  &_specialists {background-image: url('./stylesheets/icons/specialists.svg');}
+  &_camera {background-image: url('./stylesheets/icons/camera.svg');}
+  &_connected {background-image: url('./stylesheets/icons/connected.svg');}
+  &_disconnected {background-image: url('./stylesheets/icons/disconnected.svg');}
+  &_invite {background-image: url('./stylesheets/icons/invite.svg');}
+  &_order-tests {background-image: url('./stylesheets/icons/order-procedure.svg');}
+  &_video {background-image: url('./stylesheets/icons/video.svg');}
+  &_notification {background-image: url('./stylesheets/icons/notification.svg');}
+  &_admin-tag {background-image: url('./stylesheets/icons/admin-tag.svg');}
+  &_delete-user {background-image: url('./stylesheets/icons/delete-user.svg');}
+  &_view-calendar {background-image: url('./stylesheets/icons/view-calendar.svg');}
+  &_tests {background-image: url('./stylesheets/icons/tests.svg');}
+  &_procedures {background-image: url('./stylesheets/icons/assign-medications.svg');}
+  &_payouts {background-image: url('./stylesheets/icons/payouts.svg');}
+  &_is-insured-badge {background-image: url('./stylesheets/icons/is-insured-badge.png');}
+  &_is-insured-badge-big {background-image: url('./stylesheets/icons/is-insured-badge-big.png');}
+}

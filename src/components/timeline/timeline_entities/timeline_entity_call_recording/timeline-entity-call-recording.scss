@@ -1,0 +1,51 @@
+.TimelineEntityCallRecording {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 24px 16px 22px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    color: #4496e9;
+    padding-top: 3px;
+  }
+
+  &__time {
+    padding-top: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-align: right;
+  }
+
+  &__content {
+    opacity: 0;
+    transition: opacity .2s ease-in-out .4s;
+    
+    &.ready {
+      opacity: 1;
+    }
+  }
+
+  &__watermark {
+    width: 104px;
+    height: 20px;
+    position: absolute;
+    z-index: 0;
+    right: 16px;
+    top: 16px;
+    background-image: url('/static/images/logo-white.png');
+    background-position: center;
+    background-size: cover;
+    opacity: .6;
+  }
+}

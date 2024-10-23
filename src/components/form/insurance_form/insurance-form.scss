@@ -1,0 +1,47 @@
+.InsuranceForm {
+  &__wrapper {
+    & + & {
+      padding-top: 28px;
+    }
+    .insurance-title {
+      padding-bottom: 30px;
+    }
+    .form-label {
+      color: #949494;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .country-label {
+      top: 5px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .2px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-transform: uppercase;
+  }
+
+  &__remove {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ED4856;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__col-half {
+    flex-basis: 50%;
+  }
+}

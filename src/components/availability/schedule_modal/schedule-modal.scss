@@ -1,0 +1,87 @@
+.ScheduleModal {
+  &__header {
+    &__title {
+      color:#4A4A4A;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 500;
+      text-align: center;
+      padding-top: 24px;
+    }
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__sub-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    flex-grow: 1;
+    height: 34px;
+    background-color: #F4F4F4;
+    color: #6F6F6F;
+    font-size: 15px;
+
+    &.active {
+      background-color: #4496E9;
+      color: #FFF;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    font-size: 15px;
+    &:nth-child(1) {
+      margin-right: 10px;
+    }
+  }
+
+  &__label {
+    font-size: 15px;
+    color: #5D6C7C;
+    display: flex;
+    align-items: center;
+  }
+
+  &__start,
+  &__end {
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    &.active {
+      background-color: #F5F5F5;
+      border-color: #E7E8E9;
+    }
+  }
+
+  &__divider {
+    margin: 0 4px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__action {
+    width: 50%;
+    height: 36px;
+  }
+}

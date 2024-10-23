@@ -1,0 +1,33 @@
+.PhoneNumberField {
+  &__wrapper {}
+
+  &__code {
+    flex-basis: calc(100% / 3);
+  }
+
+  &__number {
+    flex-basis: calc(2 * (100% / 3) - 8px);
+  }
+
+  &__code {
+    display: flex;
+
+    &__flag-container {
+      width: 32px;
+      height: 25px;
+      justify-content: space-between;
+      margin-right: 8px;
+    }
+
+    &__flag {
+      width: 100%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    }
+
+    &-value {
+      color: #292929;
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+}

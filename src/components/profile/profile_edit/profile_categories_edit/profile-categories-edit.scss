@@ -1,0 +1,44 @@
+.ProfileCategoriesEdit {
+  &__wrapper {
+    padding-top: 6px;
+  }
+
+  &__section {
+    padding: 24px 0;
+
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
+
+    & + & {
+      border-top: 1px solid #E1E1E1;
+    }
+
+    &:last-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  &__add-new {
+    font-size: 14px;
+    color: #1877DA;
+    cursor: pointer;
+
+    &-icon {
+      padding: 0 3px;
+      font-size: 12px;
+    }
+  }
+
+  &__cancel,
+  &__submit {
+    height: 36px;
+    width: 50%;
+    font-size: 15px;
+  }
+
+  &__cancel + &__submit {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,58 @@
+@import "./src/stylesheets/breakpoints";
+
+.CallRoomFooter {
+  &__wrapper {
+    bottom: 0;
+    height: auto;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    z-index: 101;
+  }
+
+  &__content {
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    transform: translateY(100px);
+    transition: transform 250ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      transform: translateY(0);
+      transition: transform 250ms ease-in;
+    }
+  }
+
+  &__end-call {
+    min-width: inherit;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 16px 8px;
+    color: #FFFFFF;
+    font-size: 36px;
+    background-color: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-width: $bp-xs-max) {
+      margin: 40px 8px;
+    }
+  }
+
+  &__toggle-full-screen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    color: #FFF;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

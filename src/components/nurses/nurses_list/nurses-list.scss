@@ -1,0 +1,30 @@
+.NursesList {
+  &__content {
+    border-radius: 4px;
+  }
+
+  &__table-head-cell-label {
+    margin-right: 12px;
+  }
+
+  &__toggle-show-online-label {
+    color: #4A4A4A;
+    font-size: 13px;
+    letter-spacing: .22px;
+    text-transform: none;
+    font-weight: normal;
+  }
+
+  &__table-col {
+    &:nth-child(1) {
+      width: 100px;
+    }
+    &:nth-child(2) {
+      width: 60%;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      width: 20%;
+    }
+  }
+}

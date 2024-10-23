@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      html, body {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 16px;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background-color: #F9F9F9;
+        page-break-inside: avoid;
+      }
+
+      *, :after, :before, html {
+        box-sizing: border-box;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        margin-bottom: 16px;
+      }
+
+      .title {
+        color: #4A4A4A;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 16px 0 8px 0;
+        margin: 0;
+      }
+
+      .title-medium {
+        color: #4A4A4A;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        padding: 16px 0 8px 0;
+      }
+
+      .title-uppercase {
+        color: #6D859E;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 16px 0 8px 0;
+        margin: 0;
+      }
+
+      .label {
+        font-size: 15px;
+        color: #6D859E;
+      }
+
+      .value {
+        font-size: 15px;
+        color: #292929;
+      }
+
+      .centered {
+        text-align: center;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="12" class="centered">
+            <h1 class="title">DrOnline</h1>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4">
+            <span class="label">Name:</span>
+            <span class="value">John Doe</span>
+          </td>
+          <td colspan="4">&nbsp;</td>
+          <td colspan="4" class="right">
+            <span class="label">Doctor</span>
+            <span class="value">A. Hawasli</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <span class="label">Date of Birth:</span>
+            <span class="value">09/09/1990</span>
+          </td>
+          <td colspan="3">
+            <span class="label">Age:</span>
+            <span class="value">28 yrs.</span>
+          </td>
+          <td colspan="6">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <span class="label">Sex:</span>
+            <span class="value">Male</span>
+          </td>
+          <td colspan="9">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            <span class="label">Date of Visit:</span>
+            <span class="value">xx/xx/xxxx</span>
+          </td>
+          <td colspan="9">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h3 class="title-medium">HPI:</h3>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">Why are you seeing the doctor today?</td>
+          <td colspan="6" class="value">Because today is a doctor's day</td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">When did this problem start?</td>
+          <td colspan="6" class="value">today</td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">Any changes in this problem?</td>
+          <td colspan="6" class="value">No</td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">Did you injured yourself at work?</td>
+          <td colspan="6" class="value">No</td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">What makes this condition improve?</td>
+          <td colspan="6" class="value">bedtime stories</td>
+        </tr>
+
+        <tr>
+          <td colspan="6" class="label">When make this condition worse?</td>
+          <td colspan="6" class="value">lack of bedtime stories</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h3 class="title-medium">Vitals:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <span class="label">Height:</span>
+            <span class="value">192</span>
+          </td>
+          <td colspan="3">
+            <span class="label">Weight:</span>
+            <span class="value">92</span>
+          </td>
+          <td colspan="3">
+            <span class="label">BMI:</span>
+            <span class="value">24.96</span>
+          </td>
+          <td colspan="3">
+            <span class="label">Notes:</span>
+            <span class="value">Healthy Weight</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h3 class="title-medium">Histories:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Social history:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Marital Status
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Occupation
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Alcohol Consumption
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Tobbaco Consumption
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Recreational Drugs
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Caffeinated Beverages
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Past Medical History:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Cardiovascular
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Endocrine
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Cancer
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Gastro intestinal
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            General
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Heent
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Musculoskeletal
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Neuro/Psych
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Respiratory
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            GYN/OB/Breast
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            GU
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Immunologic
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Surgical History:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Cardiovascular
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            General
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            GI
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            GU
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            GYN
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Heent
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Musculoskletal
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Family History:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Family Diseases
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Allergy History:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Allergies
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Immunization History:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">
+            Immunization
+          </td>
+          <td colspan="8" class="value">&mdash;</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <h3 class="title-medium">Medical Summary:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Interview Summary:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">Description</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Diagnosis:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">Category</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">CPT Code</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Plan:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">Description</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Impression:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">Description</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+        <tr>
+          <td colspan="12">
+            <h4 class="title-uppercase">Diagnostic testing:</h3>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="label">Description</td>
+          <td colspan="8" class="value">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, maiores.</td>
+        </tr>
+
+        <tr>
+          <td colspan="12">
+            <hr>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="12" class="right">
+            e. sign
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

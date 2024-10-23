@@ -1,0 +1,157 @@
+.ProfileMenu {
+  &__wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+
+    &-avatar {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      margin-right: 8px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    &-greeting {
+      color: #4A4A4A;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &-caret {
+      font-size: 24px;
+      color: #6d859e;
+    }
+  }
+
+  &__dropdown {
+    width: 185px;
+    position: absolute;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #e8e8e8;
+    border-radius: 4px;
+    bottom: 52px;
+    left: 0;
+    transition-property: transform, opacity;
+    transition-duration: .22s, .2s;
+    transition-timing-function: ease-in-out;
+    transform-origin: bottom;
+    overflow: hidden;
+
+    &-action {
+      font-size: 14px;
+      color: #35495e;
+      background-color: #FFF;
+      padding: 12px;
+      min-height: 40px;
+      line-height: 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color .22s ease-in-out, color .22s ease-in-out;
+
+      &.blue {
+        color: #4496e9;
+      }
+
+      &:hover {
+        background-color: #55A8FF;
+        color: #FFF;
+      }
+    }
+  }
+
+  &__logout {
+    color: #ED4856;
+
+    &-icon {
+      font-size: 24px;
+    }
+  }
+
+  &__notifications {
+    &-indicator {
+      background-color: #ed4856;
+      border: 1px solid #ffffff;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: -3px;
+      right: -3px;
+  
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: radial-gradient(rgba(237, 72, 86, 0) 0%, rgba(237, 72, 86, .3) 30%, rgba(237, 72, 86, 0) 70%, transparent 100%);
+        transform: scale(0);
+        opacity: 1;
+        animation: scalePulsar 2s infinite;
+        animation-iteration-count: 3;
+      }
+  
+      &:after {
+        animation-delay: .3s;
+      }
+    }
+
+    &-badge {
+      background-color: #ed4856;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes scalePulsar {
+  0%
+  {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100%
+  {
+    transform: scale(20);
+    opacity: 0;
+  }
+}

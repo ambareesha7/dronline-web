@@ -1,0 +1,41 @@
+.TimelineVitalsFormConfirmModal {
+  &__wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    &-icon {
+      width: 155px;
+    }
+  }
+  &__close-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+  &__content {
+    padding: 0 24px 24px 24px;
+  }
+  &__title {
+    font-size: 20px;
+    color: #ed4855;
+    text-align: center;
+    padding: 16px 0;
+  }
+  &__description {
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 22px;
+    padding: 0 32px 13px 32px;
+  }
+  &__confirm, &__cancel {
+    height: 36px;
+  }
+}

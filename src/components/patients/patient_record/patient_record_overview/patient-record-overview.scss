@@ -1,0 +1,113 @@
+.PatientRecordOverview {
+  &__wrapper {
+    background: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  &__content {
+    padding: 12px 24px;
+  }
+
+  &__section {
+    padding: 12px 0;
+
+    & + & {
+      margin-top: 12px;
+      padding-top: 24px;
+    }
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+
+      & + & {
+        margin-top: 24px;
+      }
+    }
+
+    &-col {
+      width: 50%;
+    }
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #3B4A58;
+    line-height: 22px;
+  }
+
+  &__tooltip {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 14px -1px rgba(66, 78, 91, 0.55);
+    padding: 24px;
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    width: 330px;
+    line-height: initial;
+    transition: opacity .22s ease-in-out;
+
+    &-text {
+      color: #292929;
+      background: transparent;
+      font-size: 15px;
+      line-height: 22px;
+      text-transform: none;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+
+    &-icon {
+      font-weight: 500;
+      font-size: 14px;
+      color: #23CE86;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      margin-left: 6px;
+
+      &:before {
+        content: '';
+        background-color: #ecfff3;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__medical-summary {
+    display: inline-block;
+    border-radius: 12px;
+    line-height: initial;
+    font-size: 11px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 3px 12px;
+
+    &.provided {
+      background: #23CE86;
+    }
+
+    &.not-provided {
+      background: #ED4856;
+    }
+  }
+}

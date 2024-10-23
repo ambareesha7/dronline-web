@@ -1,0 +1,173 @@
+.USBoardSecondOpinion {
+  &__content, &__video-calls {
+    background: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    align-self: stretch;
+    margin-bottom: 20px;
+  }
+
+  &__item, &__video-calls > tr {
+    padding: 0 16px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 1px solid #F3F3F4;
+    background: #FFF;
+    width: 100%;
+  }
+
+  &__image {
+    height: 78px;
+    padding: 16px 0 16px 0;
+  }
+
+  &__patient {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    width: 40%;
+    overflow: hidden;
+  }
+
+  &__email {
+    color: #667085;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+
+  &__name-blur {
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    opacity: 0.7;
+  }
+  
+  &__item.assigned, &__item.requested {
+    background-color: #FFFAF3;
+  }
+
+  &__status {
+    display: flex;
+    width: 220px;
+    height: 122px;
+    padding: 39px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 15%;
+  }
+
+  &__status-tag {
+    padding: 8px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 590;
+    letter-spacing: 0.07px;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  &__status-tag.call_scheduled {
+    background: #E6FEE8;
+    color: rgba(72, 203, 84, 1);
+  }
+
+  &__status-tag.assigned, &__status-tag.requested {
+    background: #fff;
+    color: rgba(255, 168, 0, 1);
+  }
+
+  &__status-tag.in_progress, &__status-tag.opinion_submitted, &__status-tag.landingbooking, &__status-tag.landingform {
+    background: rgba(217, 241, 255, 1);
+    color: rgba(83, 167, 252, 1);
+  }
+
+  &__status-tag.cancelled, &__status-tag.rejected {
+    background: rgba(254, 242, 241, 1);
+    color: rgba(255, 23, 0, 1);
+  }
+
+  &__status-tag.done {
+    background: rgba(245, 245, 245, 1);
+    color: #7D8494;
+  }
+
+  &__status-details {
+    display: flex;
+    width: 411px;
+    height: 122px;
+    padding: 39px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 15%;
+  }
+
+  &__calendar {
+    display: flex;
+    height: 78px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+    
+    &-img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__date {
+    display: flex;
+    height: 122px;
+    padding: 39px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 10%;
+  }
+
+  &__date-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__details {
+    display: flex;
+    padding: 39px 16px;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+
+  &__details-btn {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    height: 36px;
+    width: 150px;
+  }
+
+  &__details-btn.assigned, &__details-btn.in_progress, &__details-btn.call_scheduled,  &__details-btn.done, &__details-btn.cancelled, &__details-btn.opinion_submitted, &__details-btn.landingbooking, &__details-btn.landingform {
+    border: 1px solid rgba(68, 150, 233, 1);
+  }
+
+  &__details-btn.call_scheduled,  &__details-btn.done {
+    border: 1px solid #8D969F;
+    color: #8D969F;
+  }
+
+  &__details-btn.cancelled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

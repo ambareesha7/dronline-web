@@ -1,0 +1,84 @@
+.Switcher {
+  &__container {
+    cursor: pointer;
+    font-size: inherit;
+    width: 52px;
+    height: 32px;
+    position: relative;
+    user-select: none;
+    float: left;
+    margin-bottom: 6px;
+  }
+
+  &__bar,
+  &__thumb-container,
+  &__thumb {
+    transition-duration: .08s;
+    transition-timing-function: ease-in-out;
+    transition-property: transform, background-color;
+  }
+
+  &__bar {
+    transition-delay: .05s;
+    left: 0.0625em;
+    width: 50px;
+    top: 0.1875em;
+    height: 32px;
+    border-radius: 20px;
+    position: absolute;
+
+    background-color: rgb(158,158,158);
+  }
+
+  &__thumb-container {
+    top: 0.125em;
+    left: 0;
+    width: 1em;
+    position: absolute;
+    transform: translate3d(0,0,0);
+  }
+
+  &__thumb {
+    transition-delay: .05s;
+
+    position: absolute;
+    left: 3.5px;
+    top: 1.5px;
+    border-radius: 50%;
+
+    margin: 0;
+    outline: none;
+    height: 29px;
+    width: 29px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+
+    background-color: rgb(250,250,250);
+
+    &:before {
+      background-color: transparent;
+      content: "";
+      display: block;
+      height: auto;
+      right: 0;
+      bottom: 0;
+      /*transition: all .5s;*/
+      width: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+    }
+  }
+
+  &__container.checked &__bar {
+    background-color: rgba(76, 217, 100, 1);
+  }
+
+  &__container.checked &__thumb-container {
+    transform: translate3d(100%,0,0);
+  }
+
+  &__container.checked &__thumb {
+    background-color: #FFF;
+  }
+}

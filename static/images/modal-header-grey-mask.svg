@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="515px" height="262px" viewBox="0 0 515 262" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,0 L511,-1.77635684e-15 C513.209139,-2.18216909e-15 515,1.790861 515,4 L515,238 C401.363715,254 315.530382,262 257.5,262 C199.469618,262 113.636285,254 0,238 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-/-Modal-/-Triage-Unit-/-Delete">
+            <g id="Group">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#D5D5D5" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,101 @@
+.TimelineVitalsForm {
+
+  &__wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #FFF;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 24px;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+  }
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #E2C80E;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+  }
+
+  &__close {
+    width: 64px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #292929;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 24px;
+    margin: 64px 0;
+    height: calc(100% - 128px);
+    overflow-y: scroll;
+  }
+
+  &__section{
+    padding-top: 12px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+
+    &-content {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__footer {
+    min-height: 64px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFF;
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      margin: 0;
+      height: 64px;
+    }
+
+    &-error {
+      margin: 4px 24px;
+    }
+  }
+
+  &__cancel,
+  &__submit {
+    height: 36px;
+    width: 50%;
+    font-size: 15px;
+  }
+
+  &__cancel + &__submit {
+    margin-left: 8px;
+  }
+}

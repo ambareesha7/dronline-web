@@ -1,0 +1,33 @@
+.LocationAutocomplete {
+    &__info {
+        color: #4496E9;
+    }
+    &__search {
+        position: relative;
+        display: flex;
+        &__icon {
+            height: 24px;
+            width: 16px;
+            font-size: 24px;
+            color: #4496E9;
+            position: absolute;
+            top: 12px;
+            left: 5px;
+        }
+        &__input {
+            color: #292929;
+            height: 48px;
+            padding: 21px 3px 10px 42px !important;
+            color: rgb(41, 41, 41);
+            font-size: 15px;
+            width: 100%;
+        }
+        &__cancel {
+            margin-left: 10px;
+            height: 48px;
+        }
+    }
+    .form-label {
+        margin-left: 30px;
+    }
+}

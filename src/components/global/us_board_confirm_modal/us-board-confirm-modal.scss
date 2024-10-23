@@ -1,0 +1,25 @@
+.ConfirmModal {
+
+    &__wrapper {
+      padding: 27px 50px;
+      text-align: center;
+    }
+
+    &__img {
+      img {
+        height: 68px;
+        width: 68px;
+      }
+    }
+
+    &__text {
+      color: #4A4A4A;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 590;
+      line-height: 26px;
+      margin-top: 32px;
+      margin-bottom: 48px;
+    }
+
+  }

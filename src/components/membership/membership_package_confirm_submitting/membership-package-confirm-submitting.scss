@@ -1,0 +1,69 @@
+.MembershipPackageConfirmSubmitting {
+  &__wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__header {
+    padding: 48px 0 32px 0;
+    display: flex;
+    flex-direction: column; // demo
+    align-items: center;
+    justify-content: center;
+
+    &-icon {
+      width: 88px;
+      height: 88px;
+      border: 3px solid #23ce86;
+      box-shadow: 0px 2px 21px -2px #23ce86;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: 500;
+      color: #23ce86;
+      margin-top: 32px; // demo
+    }
+  }
+
+  &__content {
+    padding: 0 78px 40px 78px;
+  }
+
+  &__title {
+    color: #23ce86;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding: 24px 0 21px 0;
+    line-height: 16px;
+  }
+
+  &__confirm, &__cancel {
+    height: 36px;
+  }
+
+  &__to-plan, &__from-plan {
+    display: inline-flex;
+    align-items: baseline;
+    font-weight: 500;
+
+    &-price {
+      display: flex;
+      text-transform: uppercase;
+
+      &-container {
+        display: flex;
+      }
+    }
+  }
+}

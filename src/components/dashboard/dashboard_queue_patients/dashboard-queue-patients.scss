@@ -1,0 +1,16 @@
+.DashboardQueuePatients {
+  &__queue-entity__avatar {
+    position: relative;
+
+    &__is-insured-badge {
+      position: absolute;
+      font-size: 12px;
+      bottom: -3px;
+      right: -3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

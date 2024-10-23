@@ -1,0 +1,15 @@
+.Rating {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__star {
+    font-size: inherit;
+    color: #676868;
+  }
+
+  &__star.active {
+    color: #50E3C2;
+  }
+}

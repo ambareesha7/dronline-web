@@ -1,0 +1,47 @@
+.Breadcrumbs {
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px 8px 12px;
+    background: #EEF8FF;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #4496E9;
+    font-weight: 600;
+    letter-spacing: 0.22px;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    position: relative;
+    transition: color .2s ease-in-out, transform .16s ease-out, opacity .2s ease-out;
+
+    & + & {
+      padding-left: 5px;
+    }
+
+    &.disabled {
+      cursor: default;
+    }
+
+    &:not(.disabled):hover {
+      color: #1563B2;
+    }
+
+    &:not(:last-of-type):after {
+      content: '\002F';
+      color: #4496E9;
+      padding-left: 5px;
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,110 @@
+.ImageViewer {
+  background-color: transparent;
+  box-shadow: none;
+
+  &.v--modal-overlay {
+    background-color: rgba(0, 0, 0, .87);
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.20);
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: opacity .25s ease, transform .35s ease;
+    &-enter, &-leave-to {
+      opacity: 0;
+      transform: translateY(30px);
+    };
+  }
+
+  &__image {
+    max-height: calc(100vh - 68px);
+    max-width: 90vw;
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 0;
+    height: calc(100% - 44px);
+    width: 50%;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+  }
+
+  &__prev {
+    left: 0;
+    justify-content: flex-start;
+  }
+
+  &__next {
+    right: 0;
+    justify-content: flex-end;
+  }
+
+  &__nav-icon {
+    color: #FFFFFF;
+    font-size: 32px;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.20);
+    cursor: pointer;
+
+    &.prev:before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__footer {
+    height: 44px;
+    align-self: stretch;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #e8e8ea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__footer-action {
+    cursor: pointer;
+  }
+
+  &__zooming {
+    display: flex;
+    align-items: center;
+  }
+
+  &__zoom-lvl {
+    font-size: 18px;
+    color: #FFF;
+    transition: opacity .3s ease, transform .25s ease;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

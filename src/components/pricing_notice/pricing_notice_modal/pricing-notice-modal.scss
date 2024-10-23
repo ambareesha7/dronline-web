@@ -1,0 +1,58 @@
+.PricingNotice {
+    &__wrapper {
+      padding: 32px;
+      background-color: #fff;
+    }
+  
+    &__header {
+      height: 25px;
+  
+      &-close {
+        color: #4a4a4a;
+        cursor: pointer;
+        font-size: 14px;
+        position: absolute;
+        right: 30px;
+      }
+    }
+  
+    &__content {
+      text-align: center;
+      img {
+        width: 70px;
+        height: 70px;
+        margin-top: 48px;
+      }
+    }
+
+    &__description {
+       &-one {
+        margin-top: 32px;
+        color: #4A4A4A;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+       }
+       &-two {
+        margin: 48px 0;
+        color: #4A4A4A;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+       } 
+    }
+  
+   &__footer {
+
+    &-update-your-pricing-now {
+        width: 100%;
+    }
+   }
+  
+    
+  }
+  

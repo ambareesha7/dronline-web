@@ -1,0 +1,107 @@
+.TimelineEntityProvidedHpi {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 24px 16px 22px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: 24px 0 12px 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    text-align: right;
+    color: #E2C80E;
+    padding-top: 3px;
+  }
+
+  &__time {
+    padding-top: 2px;
+  }
+
+  &__specialist {
+    &-card {
+      display: flex;
+      padding: 12px 24px;
+
+      &-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
+      }
+
+      &-info {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-name {
+        font-size: 14px;
+        color: #292929;
+      }
+
+      &-role {
+        font-size: 12px;
+        color: #6D859E;
+      }
+    }
+  }
+
+  &__section {
+    margin-left: 36px;
+    border-radius: 4px;
+    padding: 16px 14px 16px 19px;
+    position: relative;
+    border: 1px solid #F0F0F0;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+
+    &:before {
+      content: attr(data-index);
+      position: absolute;
+      left: -36px;
+      top: 16px;
+      color: #6d859e;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0.19px;
+      padding: 5px 7px;
+      background-color: #f5fbff;
+      border-radius: 50%;
+    }
+  }
+
+  &__time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-align: right;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    &-action {
+      height: 36px;
+    }
+  }
+}

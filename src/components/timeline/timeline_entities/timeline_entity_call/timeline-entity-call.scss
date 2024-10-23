@@ -1,0 +1,70 @@
+.TimelineEntityCall {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 24px 16px 22px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    color: #23CE86;
+    text-align: right;
+    padding-top: 3px;
+  }
+
+  &__time {
+    padding-top: 2px;
+  }
+
+  &__specialist {
+    &-card {
+      display: flex;
+
+      &-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
+        transition: box-shadow .2s ease-in-out;
+
+        &.online {
+          box-shadow: 0 0 0 2pt #23ce86;
+        }
+      }
+
+      &-info {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-name {
+        font-size: 14px;
+        color: #292929;
+      }
+
+      &-role {
+        font-size: 12px;
+        color: #6D859E;
+      }
+    }
+  }
+
+  &__time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    text-align: right;
+  }
+}

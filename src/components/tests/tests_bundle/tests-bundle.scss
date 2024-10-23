@@ -1,0 +1,56 @@
+.TestsBundle {
+  &__wrapper {
+    padding: 20px 0;
+
+    & + .TestsListTest__wrapper {
+      margin-top: 6px;
+      border-top: 1px solid #f5f5f5;
+    }
+
+    .table {
+      border: 1px;
+      border-spacing: 0 6px;
+      border-collapse: separate;
+      width: 100%;
+    }
+    .table-body-cell {
+      text-align: center;
+      color: #292929;
+      font-size: 17px;
+    }
+
+    & + .TestsBundle__wrapper {
+      border-top: 1px solid #f5f5f5;
+    }
+
+    td {
+      background: rgb(249, 249, 249);
+    }
+  }
+
+  &__item {
+    td:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    td:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &__inserted-at {
+    font-weight: 500;
+    color: #6d859e;
+    text-align: right;
+  }
+
+  &__item__header,
+  &__item__value {
+    text-align: left !important;
+  }
+
+  &__item__value {
+    font-size: 15px;
+  }
+}

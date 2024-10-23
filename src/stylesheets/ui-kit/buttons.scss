@@ -1,0 +1,163 @@
+html[dir=ltr] {
+  .form-button + .form-button {
+    margin-left: 8px;
+  }
+  .form-button.icon-inside > .icon-btn-success {
+    padding-left: 8px;
+  }
+}
+
+html[dir=rtl] {
+  .form-button + .form-button {
+    margin-right: 8px;
+  }
+  .form-button.icon-inside > .icon-btn-success {
+    padding-right: 8px;
+  }
+}
+
+.form-button {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: center;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 3px 22px;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  user-select: none;
+  line-height: 19px;
+  border: none;
+  min-width: 130px;
+  text-decoration: none;
+
+  &.small {
+    height: 28px;
+    min-width: 72px;
+  }
+
+  @media (max-width: $bp-xs-max) {
+    min-width: 107px;
+  }
+
+  &.icon-inside {
+    justify-content: flex-start;
+    & > [class^="icon-"] {
+      font-size: 24px;
+    }
+  }
+
+  &.processing {
+    pointer-events: none;
+    opacity: .8;
+  }
+}
+
+.btn-submit {
+  @extend .form-button;
+  border-color: #4496E9;
+  background-color: #4496E9;
+
+  .Spinner__petal {
+    background-color: #FFF;
+  }
+}
+
+.btn-gray {
+  @extend .form-button;
+  background-color: #797979;
+}
+
+.btn-white {
+  @extend .form-button;
+  background-color: #FFF;
+  border: 1px solid #D5D5D5;
+  color: #4496E9;
+}
+
+.btn-red {
+  @extend .form-button;
+  background-color: #ED4856;
+  color: #FFF;
+}
+
+.btn-green {
+  @extend .form-button;
+  background-color: #23CE86;
+  color: #FFF;
+}
+
+.btn-blue {
+  @extend .form-button;
+  border: 1px solid #e7e8e9;
+  border-radius: 4px;
+  color: #4496e9;
+}
+
+.btn-cancel {
+  @extend .form-button;
+  border: 1px solid #D5D5D5;
+  border-radius: 4px;
+  color: #1877DA;
+  box-shadow: none;
+  transition: border-color .22s ease-in-out;
+
+  &:hover {
+    border-color: #55A8FF;
+  }
+}
+
+.btn-edit {
+  @extend .form-button;
+  border: 1px solid #55A8FF;
+  border-radius: 4px;
+  color: #1877DA;
+}
+
+.btn-blue-filled {
+  @extend .form-button;
+  background: #53A7FC;
+  border-radius: 4px;
+  color: #FFF;
+
+  .Spinner__petal {
+    background-color: #FFF;
+  }
+}
+
+.btn-link {
+  @extend .form-button;
+  border: none;
+  letter-spacing: -0.31px;
+  color: #4496E9;
+  padding: 0 8px;
+  min-width: 0;
+  text-decoration: none;
+  line-height: 16px;
+}
+
+.btn-green-bordered {
+  @extend  .form-button;
+  border: 1px solid #23ce86;
+  color: #23ce86;
+}
+
+.btn-red-bordered {
+  @extend .form-button;
+  border: 1px solid #ED4856;
+  color: #ED4856;
+}
+
+.btn-blue-bordered {
+  @extend .form-button;
+  border: 1px solid #4496E9;
+  color: #4496E9;
+}

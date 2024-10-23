@@ -1,0 +1,11 @@
+{
+  "location": {
+    "street": "Street name",
+    "number": "123",
+    "postalCode": "321",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "additionalNumbers": "000",
+    "neighborhood": "Neighborhood"
+  }
+}

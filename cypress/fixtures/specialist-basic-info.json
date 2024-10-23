@@ -1,0 +1,12 @@
+{
+  "basicInfo": {
+    "title": 1,
+    "firstName": "John",
+    "lastName": "Smith",
+    "birthDate": {
+      "timestamp": 5533
+    },
+    "imageUrl": "https://storage.googleapis.com/dronline-prod/images/patients/Man.png",
+    "phoneNumber": "+380669595295"
+  }
+}

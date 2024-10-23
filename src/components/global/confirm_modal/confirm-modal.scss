@@ -1,0 +1,66 @@
+.ConfirmModal {
+
+    &__wrapper {
+      padding: 43px;
+      text-align: center;
+    }
+    
+    &__img {
+      img {
+        height: 134px;
+        width: 134px;
+      }
+    }
+
+    &__imgsuccess {
+      img {
+        height: 68px;
+        width: 68px;
+      }
+    }
+
+    // &__title {
+    //   font-size: 24px;
+    //   color: #ED4856;
+    //   margin-bottom: 16px;
+    // }
+  
+    &__content {
+      font-size: 20px;
+      color: rgba(237, 72, 85, 1);
+      line-height: 26px;
+      margin-bottom: 16px;
+      margin-top: 30px;
+      font-weight: 500;
+    }
+
+    &__confirmtext {
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(74, 74, 74, 1);
+      margin-bottom: 48px;
+      margin-top: 32px;
+    }
+
+    &__desc {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 65px;
+      font-weight: 400;
+      color: rgba(74, 74, 74, 1)
+    }
+  
+    &__actions {
+      display: flex;
+    }
+  
+    &__action {
+      width: 50%;
+      height: 36px;
+      font-size: 15px;
+      &.ripple {
+        margin: auto;
+        height: 44px;
+      }
+    }
+  }

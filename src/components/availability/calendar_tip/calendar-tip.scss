@@ -1,0 +1,58 @@
+.CalendarTip {
+
+  &__wrapper {
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2);
+    z-index: 1001;
+    bottom: 70px;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+
+    &.default {
+      position: absolute;
+      left: -22px;
+      right: -23px;
+    }
+
+    &.affixed {
+      position: fixed;
+    }
+  }
+
+  &__content {
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    &-message {
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__info {
+    justify-content: center;
+
+    &-icon {
+      font-size: 20px;
+      color: #FFF;
+      margin-right: 4px;
+    }
+
+    &-close {
+      font-size: 10px;
+      color: #fff;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  &__restorable {
+    justify-content: center;
+  }
+
+  &__undo {
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+}

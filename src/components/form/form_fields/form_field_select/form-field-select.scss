@@ -1,0 +1,64 @@
+.FormFieldSelect {
+
+  &__wrapper:not(.vertical) {
+    margin-bottom: 16px;
+  }
+
+  /*
+  &__wrapper.vertical {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+  */
+
+  &__label {
+    flex-basis: 150px;
+    flex-grow: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6D859E;
+    flex-shrink: 0;
+  }
+
+  &__wrapper.wide &__label {
+    flex-basis: 200px;
+  }
+
+  &__wrapper.subform &__label {
+    flex-basis: 136px;
+  }
+
+  &__wrapper.wide.subform &__label {
+    flex-basis: 186px;
+  }
+
+  &__wrapper.subform &__view {
+    padding-left: 10px;
+  }
+
+  &__value {
+    font-size: 15px;
+    color: #292929;
+  }
+
+  &__wrapper.vertical &__label,
+  &__wrapper.vertical &__value {
+    width: 100%;
+  }
+
+  &__wrapper.vertical &__value {
+    margin: 8px 0;
+  }
+
+  &__view, &__edit {
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__subform {
+    margin: 16px 0 0 0;
+
+    &.view-mode {
+      border-left: 4px solid #E9E9E9;
+    }
+  }
+}

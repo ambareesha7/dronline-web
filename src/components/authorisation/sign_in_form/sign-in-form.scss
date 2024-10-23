@@ -1,0 +1,66 @@
+.SignInForm {
+  &__wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__header {
+    padding-bottom: 6px;
+
+    &-logo {
+      height: 28px;
+
+      &-container {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    color: #292929;
+    padding-left: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    &-prompt {
+      font-size: 13px;
+      color: #6d859e;
+      letter-spacing: .22px;
+      margin-top: 24px;
+      
+      &-link {
+        color: #4496E9;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__password-visibility-trigger {
+    position: absolute;
+    right: 12px;
+    top: 27px;
+    font-size: 18px;
+    color: #797979;
+    cursor: pointer;
+  }
+
+  &__password-recovery-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4496E9;
+    text-decoration: none;
+  }
+}

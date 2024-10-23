@@ -1,0 +1,69 @@
+.SignUpForm {
+  &__wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__header {
+    padding-bottom: 6px;
+
+    &-logo {
+      height: 28px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    color: #292929;
+    padding-left: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__prompt {
+    font-size: 13px;
+    line-height: 17px;
+    color: #6d859e;
+    letter-spacing: .22px;
+    margin-top: 24px;
+    
+    &-container {
+      padding-top: 16px;
+    }
+
+    &-link {
+      color: #4496E9;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+
+  &__password-visibility-trigger {
+    position: absolute;
+    right: 12px;
+    top: 27px;
+    font-size: 18px;
+    color: #797979;
+    cursor: pointer;
+  }
+
+  &__agree-with-tos {
+    color: #4A4A4A;
+    font-size: 15px;
+    letter-spacing: -.41px;
+    line-height: 18px;
+  }
+
+  &__terms-and-conditions-link {
+    color: inherit;
+  }
+}

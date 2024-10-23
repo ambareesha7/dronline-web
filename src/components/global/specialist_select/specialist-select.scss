@@ -1,0 +1,48 @@
+.SpecialistSelect {
+
+  &__wrapper {
+
+    .multiselect__tags {
+      padding: 10px 12px;
+    }
+
+    .multiselect__single,
+    .multiselect__option {
+      height: 100%;
+      display: flex;
+
+      &--highlight {
+        background-color: #F5F5F5;
+      }
+    }
+
+    &.not-selected .multiselect__single {
+      font-size: 15px;
+      color: #6D859E;
+    }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #9B9B9B;
+    margin-right: 8px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      font-size: 14px;
+      color: #292929;
+    }
+
+    &-description {
+      font-size: 12px;
+      color: #6D859E;
+      letter-spacing: .2px;
+    }
+  }
+}

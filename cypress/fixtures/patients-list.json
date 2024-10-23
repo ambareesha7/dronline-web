@@ -1,0 +1,27 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "title": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "birthDate": {
+        "timestamp": 315532800
+      },
+      "city": "Dubai",
+      "country": "UAE"
+    },
+    {
+      "id": 2,
+      "title": 2,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "birthDate": {
+        "timestamp": 315532800
+      },
+      "city": "Dubai",
+      "country": "UAE"
+    }
+  ],
+  "nextToken": "0"
+}

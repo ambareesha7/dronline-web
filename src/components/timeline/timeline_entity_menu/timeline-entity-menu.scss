@@ -1,0 +1,44 @@
+.TimelineEntityMenu {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__trigger {
+    color: #6D859E;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  &__dropdown {
+    width: 200px;
+    position: absolute;
+    box-shadow: 0 4px 14px -1px rgba(66,78,91,0.55);
+    border-radius: 4px;
+    overflow: hidden;
+    transition-property: transform, opacity;
+    transition-duration: .22s, .2s;
+    transition-timing-function: ease-in-out;
+    transform-origin: top;
+    right: 0;
+    top: 0;
+  }
+
+  &__action {
+    font-size: 14px;
+    color: #292929;
+    letter-spacing: -.5px;
+    padding: 0 16px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #FFF;
+    user-select: none;
+    transition: background-color .22s ease-in-out;
+
+    &:hover {
+      background-color: #F5F5F5;
+    }
+  }
+}

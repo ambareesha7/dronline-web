@@ -1,0 +1,59 @@
+.PatientVitalsHistory {
+  &__section {
+    background-color: #ffffff;
+    border-radius: 4px;
+    user-select: none;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &-header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    &-title {
+      color: #4A4A4A;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-content {
+      padding: 16px 16px 24px 16px;
+    }
+
+    &-info {
+      padding: 8px 24px 16px 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 24px;
+    }
+
+    &-toggle {
+      color: #6d859e;
+      font-size: 24px;
+      cursor: pointer;
+
+      &:before {
+        transform: rotate(0deg);
+        transition: transform .2s ease-in-out;
+      }
+
+      &.active:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__no-results {
+    padding: 24px;
+    font-size: 16px;
+    color: #4A4A4A;
+    letter-spacing: -.39px;
+    text-align: center;
+  }
+}

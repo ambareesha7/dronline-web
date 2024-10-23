@@ -1,0 +1,307 @@
+@import "breakpoints";
+
+.form-row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: relative;
+}
+
+.form-row + .form-row,
+.form-actions + .form-row {
+  padding-top: 12px;
+}
+
+.form-row--cols {
+  @extend .form-row;
+  display: flex;
+}
+
+html[dir=ltr] {
+  .form-row--cols {
+    .form-col + .form-col {
+      margin-left: 8px;
+    }
+  }
+}
+
+html[dir=rtl] {
+  .form-row--cols {
+    .form-col + .form-col {
+      margin-right: 2px;
+    }
+  }
+}
+
+.form-col {
+  flex-grow: 1;
+  position: relative;
+
+  &.col-1 {
+    flex-basis: calc(100% / 3);
+  }
+
+  &.col-2 {
+    flex-basis: calc(2 * (100% / 3) - 8px);
+  }
+}
+
+.form-value {
+  font-size: 15px;
+  color: #292929;
+}
+
+.form-label {
+  font-size: 15px;
+  color: #6D859E;
+}
+
+.form-label.label-inner {
+  position: absolute;
+  top: 15px;
+  line-height: 18px;
+  transition: top .22s;
+  cursor: text;
+}
+
+.form-row + .form-row .label-inner,
+.form-actions + .form-row .label-inner {
+  top: 29px;
+}
+
+.form-field:focus + .form-label.label-inner,
+.form-field.filled + .form-label.label-inner,
+.form-label.label-inner.label-top {
+  top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .2px;
+}
+
+.form-row + .form-row .form-field:focus + .form-label.label-inner,
+.form-row + .form-row .form-field.filled + .form-label.label-inner,
+.form-actions + .form-row .form-field.filled + .form-label.label-inner,
+.form-actions + .form-row .form-field:focus + .form-label.label-inner,
+.form-row + .form-row .form-label.label-inner.label-top,
+.form-actions + .form-row .form-label.label-inner.label-top {
+  top: 18px;
+}
+
+.form-row + .form-row--cols .label-inner,
+.form-row--cols + .form-row--cols .label-inner {
+  top: 17px;
+}
+
+.form-row + .form-row--cols .form-field:focus + .form-label.label-inner,
+.form-row + .form-row--cols .form-field.filled + .form-label.label-inner,
+.form-row--cols + .form-row--cols .form-field:focus + .form-label.label-inner,
+.form-row--cols + .form-row--cols .form-field.filled + .form-label.label-inner {
+  top: 6px;
+}
+
+html[dir=ltr] .form-label.label-inner {
+  left: 12px;
+}
+html[dir=rtl] .form-label.label-inner {
+  right: 12px;
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-bottom: 1px solid #E7E8E9;
+  font-size: 15px;
+  line-height: 17px;
+  color: #292929;
+  font-weight: 400;
+  letter-spacing: .14px;
+  -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
+  text-align: left;
+  outline: none;
+  font-family: 'IBM Plex Sans', sans-serif;
+
+  &.is-danger {
+    border-bottom: 1px solid #dd475a !important;
+  }
+
+  &.icon-inside {
+    padding-right: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    letter-spacing: -.39px;
+    line-height: 24px;
+    color: transparent;
+  }
+
+  &:focus::placeholder {
+    color: #E1E1E1;
+  }
+}
+html[dir=ltr] .form-field {
+  padding: 21px 3px 10px 12px;
+  text-align: left;
+  &.icon-inside {
+    padding-right: 28px;
+  }
+}
+html[dir=rtl] .form-field {
+  padding: 21px 12px 10px 3px;
+  text-align: right;
+  &.icon-inside {
+    padding-left: 28px;
+  }
+}
+
+.form-field--aligned-right {
+  @extend .form-field;
+  padding: 20px 8px 6px 3px;
+  text-align: right;
+}
+html[dir=ltr] .form-field--aligned-right {
+  padding: 20px 8px 6px 3px;
+  text-align: right;
+}
+html[dir=rtl] .form-field--aligned-right {
+  padding: 20px 3px 6px 8px;
+  text-align: left;
+}
+
+.form-help {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  transition: all .4s ease;
+
+  &.is-danger {
+    color: #dd475a;
+  }
+}
+
+.form-chars-indicator {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 12px;
+  color: #6D859E;
+  padding: 2px;
+  background-color: #FFF;
+}
+
+.form-help + .form-chars-indicator {
+  bottom: 24px;
+}
+
+.form-hidden-validator {
+  display: none;
+}
+
+.form-textarea {
+  @extend .form-field;
+  height: 126px;
+  resize: none;
+}
+
+.form-textarea + .form-label {
+  background-color: #FFF;
+}
+
+.form-submit.processing {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.form-actions {
+  margin-top: 19px;
+  display: flex;
+
+  &.full [class*=btn-] {
+    width: 100%;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.pull-right {
+    justify-content: flex-end;
+  }
+
+  &.pull-left {
+    justify-content: flex-start;
+  }
+
+  &.pull-down {
+    align-items: flex-end;
+  }
+
+  &.pull-top {
+    align-items: flex-start;
+  }
+}
+
+.textarea {
+  resize: none;
+  display: block;
+  width: 100%;
+  height: 68px;
+  padding: 3px 3px 3px 10px;
+  border: none;
+  border-bottom: 1px solid #B4C0CB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+  font-size: 15px;
+  color: #253540;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  background-color: #FFFFFF;
+  text-align: left;
+  outline: none;
+}
+html[dir=ltr] .textarea {
+  padding: 3px 3px 3px 10px;
+}
+html[dir=rtl] .textarea {
+  padding: 3px 10px 3px 3px;
+}
+
+.form-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-col .label-inner,
+.form-col .label-inner {
+  top: 17px;
+}
+
+.form-col .form-field:focus + .form-label.label-inner,
+.form-col .form-field.filled + .form-label.label-inner {
+  top: 5px;
+}
+
+.vue-tel-input {
+  outline: none;
+  box-shadow: none !important;
+  & *:focus {
+    outline: none;
+  }
+  & input {
+    font-size: 15px;
+    line-height: 17px;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: .14px;
+  }
+}

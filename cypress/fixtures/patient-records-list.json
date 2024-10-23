@@ -1,0 +1,25 @@
+{
+  "patientRecords": [
+    {
+      "timelineId": 1,
+      "startDate": {
+        "timestamp": 315532800
+      },
+      "endDate": {
+        "timestamp": 315532800
+      },
+      "medicalSummaryProvided": false
+    },
+    {
+      "timelineId": 2,
+      "startDate": {
+        "timestamp": 315532800
+      },
+      "endDate": {
+        "timestamp": 315532800
+      },
+      "medicalSummaryProvided": false
+    }
+  ],
+  "nextToken": "0"
+}

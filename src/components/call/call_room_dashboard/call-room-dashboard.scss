@@ -1,0 +1,148 @@
+.CallRoomDashboard {
+  &__wrapper {
+    width: 515px;
+    will-change: width, opacity;
+    background-color: #F5F5F5;
+    position: relative;
+
+    &.maximized {
+      transition: width .22s linear;
+    }
+
+    &.minimized,
+    &.resizing {
+      width: 48px;
+      position: absolute;
+      right: 0;
+      z-index: 101;
+    }
+  }
+
+  &__wrapper.minimized &__toggle-view,
+  &__wrapper.resizing &__toggle-view{
+    padding: 0 8px;
+
+    &-label {
+      display: none;
+    }
+  }
+
+  &__header {
+    height: 64px;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 4px 4px 4px 0 #F5F5F5;
+  }
+
+  &__wrapper.minimized &__header {
+    height: 48px;
+  }
+
+  &__tabs {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__tab {
+    // width: calc(100% / 3);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 15px;
+    color: #A6A6A6;
+    background-color: #FFFFFF;
+    transition: background-color .22s ease-in-out;
+
+    &:before {
+      content: '';
+      height: 0;
+      background-color: transparent;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      transition: all .35s ease;
+    }
+
+    &:hover {
+      &:before {
+        height: 2px;
+        background-color: #53A7FC;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    &.active {
+      color: #1877DA;
+
+      &:before {
+        background-color: #53A7FC;
+        height: 2px;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__toggle-view {
+    width: 64px;
+    background: #292929;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 19px;
+    cursor: pointer;
+    transition: width .22s ease-in-out;
+    will-change: width;
+
+    &-icon {
+      font-size: 18px;
+    }
+
+    &-label {
+      opacity: 0;
+      margin-left: 8px;
+      transition: opacity .22s ease-in-out;
+    }
+
+    &:hover {
+      width: 136px;
+    }
+
+    &:hover &-label {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper.minimized &__toggle-view-icon {
+    font-size: 22px;
+  }
+
+  &__content {
+    overflow: hidden;
+    height: calc(100% - 64px);
+    margin-top: 64px;
+  }
+}
+
+.CallRoomDashboard__wrapper-enter {
+  width: 0;
+}
+.CallRoomDashboard__wrapper-enter-to.CallRoomDashboard__wrapper-enter-active {
+  width: 515px;
+}
+.CallRoomDashboard__wrapper-leave {
+  width: 515px;
+}
+.CallRoomDashboard__wrapper-leave-to.CallRoomDashboard__wrapper-leave-active {
+  width: 0;
+}

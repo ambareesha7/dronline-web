@@ -1,0 +1,27 @@
+.TimelineAssignMedicationsMedication {
+  padding: 8px 0;
+
+  & + & {
+    padding-top: 32px;
+  }
+
+  &__title {
+    font-size: 13px;
+    color: #6D859E;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__remove {
+    font-size: 12px;
+    color: #ED4856;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

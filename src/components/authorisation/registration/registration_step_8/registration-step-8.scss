@@ -1,0 +1,75 @@
+.RegistrationStep8 {
+  &__wrapper {
+    display: flex;
+    padding: 40px 30px;
+    background: #EFF7FF;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__col {
+    width: 50%;
+    min-height: 90vh;
+
+    &:nth-child(1) {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &:nth-child(2) {
+      background-color: #fff;
+      min-width: 370px;
+      display: flex;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: opacity 2s ease-in-out;
+    background-image: url(/static/images/banner-complete.png);
+  }
+}
+
+.PasswordRecoveryStep7 {
+  &__wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__header {
+    padding-bottom: 6px;
+
+    &-logo {
+      height: 28px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    padding-left: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__description {
+    color: #3B4A58;
+    font-size: 15px;
+    line-height: 22px;
+    padding-bottom: 24px;
+  }
+}

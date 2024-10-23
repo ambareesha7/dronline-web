@@ -1,0 +1,35 @@
+.CallSessionPublisher {
+  &__wrapper {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    box-shadow: 0 3px 6px 3px rgba(0,0,0,0.50);
+    margin: 6px 0;
+    transition: transform 16s ease-out, opacity 2s ease-out;
+
+    & video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &.selected {
+      box-shadow: 0 0 0 2px #1877DA, 0 3px 6px 3px rgba(0,0,0,0.50);
+    }
+  }
+
+  &__audio-indicator {
+    position: absolute;
+    width: 4px;
+    z-index: 1;
+    right: 5px;
+    bottom: 5px;
+    background-color: transparent;
+    background-repeat: repeat-y;
+    background-image: linear-gradient(to bottom, #6CE5B2 2px, transparent 1px);
+    background-size: 100% 3px;
+  }
+}

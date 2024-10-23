@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Image/Illustration/Payments</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="103" cy="103" r="103"></circle>
+        <radialGradient cx="11.1989839%" cy="78.8670241%" fx="11.1989839%" fy="78.8670241%" r="157.94425%" gradientTransform="translate(0.111990,0.788670),scale(0.668831,1.000000),rotate(-31.150540),translate(-0.111990,-0.788670)" id="radialGradient-3">
+            <stop stop-color="#B69A5E" offset="0%"></stop>
+            <stop stop-color="#CEBA75" offset="38.5503425%"></stop>
+            <stop stop-color="#F4E9B3" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-4" x="15.5389167" y="32.8690513" width="153.490022" height="102.658911" rx="6.23576686"></rect>
+    </defs>
+    <g id="07-Payments-(mocked)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07-02-00-My-Profile-Membership-Select-New-Plan-Telr" transform="translate(-93.000000, -120.000000)">
+            <g id="Illustration/Payments" transform="translate(93.000000, 120.000000)">
+                <g id="Icon">
+                    <g id="Group">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill-opacity="0.5" fill="#FFF4D6" xlink:href="#path-1"></use>
+                        <g mask="url(#mask-2)">
+                            <g transform="translate(107.056807, 102.432217) rotate(8.000000) translate(-107.056807, -102.432217) translate(14.556807, 17.932217)">
+                                <g id="Rectangle" stroke-width="1" fill="none">
+                                    <mask id="mask-5" fill="white">
+                                        <use xlink:href="#path-4"></use>
+                                    </mask>
+                                    <use id="Mask" fill="url(#radialGradient-3)" transform="translate(92.283928, 84.198507) rotate(-32.000000) translate(-92.283928, -84.198507) " xlink:href="#path-4"></use>
+                                    <rect fill="#484848" mask="url(#mask-5)" transform="translate(83.525918, 70.330871) rotate(-32.000000) translate(-83.525918, -70.330871) " x="6.40229091" y="58.3116047" width="154.247255" height="24.0385332"></rect>
+                                </g>
+                                <path d="M145.756843,74.3380779 C143.086625,76.6235681 141.394347,80.0186492 141.394347,83.8089831 C141.394347,87.5993169 143.086625,90.994398 145.756843,93.2798882 C144.081345,94.2987823 142.114085,94.8855826 140.009772,94.8855826 C133.892335,94.8855826 128.933172,89.92642 128.933172,83.8089831 C128.933172,77.6915461 133.892335,72.7323835 140.009772,72.7323835 C142.114085,72.7323835 144.081345,73.3191838 145.756843,74.3380779 Z M153.855521,94.8855826 C147.738084,94.8855826 142.778922,89.92642 142.778922,83.8089831 C142.778922,77.6915461 147.738084,72.7323835 153.855521,72.7323835 C159.972958,72.7323835 164.932121,77.6915461 164.932121,83.8089831 C164.932121,89.92642 159.972958,94.8855826 153.855521,94.8855826 Z" id="Combined-Shape" fill="#B8A066" transform="translate(146.932646, 83.808983) rotate(-32.000000) translate(-146.932646, -83.808983) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

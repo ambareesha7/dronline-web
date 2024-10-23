@@ -1,0 +1,47 @@
+$size: 26px;
+$delay_step: 1/12;
+
+.Spinner {
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &__container {
+    width: $size;
+    height: $size;
+    margin: 0 auto;
+    position: relative;
+    transform: translate(-$size, -$size) scale(1) translate($size, $size);
+  }
+
+  &__petal{
+    left: calc(#{($size / 16) * 7});
+    position: absolute;
+    animation: lds-spinner linear 1s infinite;
+    background: #55A8FF;
+    width: calc(#{$size} / 8);
+    height: calc(#{$size} / 4);
+    border-radius: 40%;
+    transform-origin: calc(#{$size} / 16) calc(#{$size} / 2);
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        transform: rotate(#{30 * ($i - 1)}deg);
+        animation-delay: calc(#{$i * $delay_step - 1}s);
+      }
+    }
+  }
+}

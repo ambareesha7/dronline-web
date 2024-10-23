@@ -1,0 +1,137 @@
+.PatientOnboardingStep4 {
+  &__wrapper {
+    min-height: calc(100% - 168px);
+    margin: 80px 0 88px;
+    padding: 48px 0;
+    display: flex;
+    align-items: center;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__section {
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &-header {
+      height: 64px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-col {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-edit {
+      height: 32px;
+    }
+
+    &-toggle {
+      color: #6d859e;
+      font-size: 24px;
+      cursor: pointer;
+
+      &:before {
+        transform: rotate(0deg);
+        transition: transform .2s ease-in-out;
+      }
+
+      &.active:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-content {
+      padding: 8px 40px 24px 40px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    &-label {
+      font-size: 15px;
+      color: #5D6C7C;
+      margin-right: 6px;
+      width: 30%;
+    }
+
+    &-value {
+      font-size: 15px;
+      color: #292929;
+      margin-left: 6px;
+      width: 70%;
+    }
+  }
+
+  &__block {
+    & + & {
+      padding-top: 16px;
+    }
+  }
+
+  &__container,
+  &__error {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__error {
+    padding-bottom: 4px;
+  }
+
+  &__footer {
+    padding: 24px 0;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__general-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  &__avatar {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__name {
+    padding-top: 24px;
+  }
+
+  &__contacts {
+    padding-top: 8px;
+    color: #4A4A4A;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  &__age {
+    color: #4A4A4A;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding-top: 4px;
+  }
+}

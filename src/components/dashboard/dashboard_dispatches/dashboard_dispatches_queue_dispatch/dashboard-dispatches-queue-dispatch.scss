@@ -1,0 +1,44 @@
+.DashboardDispatchesQueueDispatch {
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  &__wrapper td {
+    line-height: initial;
+  }
+
+  &__toggle {
+    font-size: 24px;
+    color: #6D859E;
+
+    &:before {
+      transform: rotate(0deg);
+      transition: transform .2s ease-in-out;
+    }
+
+    &.active:before {
+      transform: rotate(180deg);
+    }
+
+    &-container {
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  &__details {
+    padding: 14px 24px 32px 24px;
+    transition: opacity .2s ease-in-out;
+
+    &-map {
+      height: 292px;
+      width: 100%;
+    }
+  }
+}

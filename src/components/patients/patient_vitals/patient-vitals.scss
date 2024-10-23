@@ -1,0 +1,55 @@
+.PatientVitals {
+  &__wrapper {
+    padding: 16px 24px 32px 24px;
+  }
+  &__section {
+    padding-bottom: 8px;
+    & + & {
+      margin-top: 16px;
+      padding-top: 16px;
+    }
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 24px;
+    }
+
+    &-col {
+      padding: 0;
+    }
+
+    &-header-row {
+      padding: 8px 0 16px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 24px;
+    }
+  }
+
+  &__label {
+    color: #5D6C7C;
+    font-size: 15px;
+    flex-basis: 160px;
+  }
+
+  &__value {
+    font-size: 15px;
+    color: #292929;
+    flex-basis: calc(100% - 160px);
+  }
+
+  &__record-link {
+    color: #292929;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &-icon {
+      color: #4496e9;
+      font-size: 20px;
+    }
+  }
+}

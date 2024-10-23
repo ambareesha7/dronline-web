@@ -1,0 +1,56 @@
+{
+    "social": {
+      "fields": [
+        {
+          "uuid": "c96fad63-633a-4f9f-b0fc-39f1c3867c79",
+          "label": "Marital Status",
+          "select": {
+            "options": [
+              {
+                "label": "Single"
+              },
+              {
+                "label": "Married"
+              },
+              {
+                "label": "Divorced"
+              },
+              {
+                "label": "Widowed"
+              },
+              {
+                "label": "Dependants"
+              }
+            ],
+            "choice": {
+              "label": "Married"
+            }
+          }
+        },
+        {
+          "uuid": "c6aba745-caa5-4d1a-af7c-4cb85433a3d8",
+          "label": "Occupation",
+          "select": {
+            "options": [
+              {
+                "label": "None"
+              },
+              {
+                "label": "Professional"
+              },
+              {
+                "label": "Laborar"
+              },
+              {
+                "label": "Driver"
+              }
+            ],
+            "choice": {
+              "label": "Laborar"
+            }
+          }
+        }
+      ],
+      "completed": true
+    }
+  }

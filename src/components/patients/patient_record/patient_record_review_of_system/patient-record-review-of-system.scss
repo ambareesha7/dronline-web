@@ -1,0 +1,25 @@
+.PatientRecordReviewOfSystem {
+  &__wrapper {
+    background: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-action {
+      height: 32px;
+    }
+  }
+
+  &__content {
+    padding: 12px 24px;
+  }
+}

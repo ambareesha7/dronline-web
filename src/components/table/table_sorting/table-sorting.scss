@@ -1,0 +1,53 @@
+.TableSorting {
+
+  &__wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    line-height: initial;
+  }
+
+  &__content {
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    margin-left: -8px;
+    background-color: transparent;
+    transition: background-color .2s ease-in-out;
+  }
+
+  &__wrapper.active &__content,
+  &__wrapper:hover &__content {
+    background-color: #F7F7F7;
+  }
+
+  &__directions {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: initial;
+  }
+
+  &__asc, &__desc {
+    color: #6d859e;
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &__asc {
+    transform: translateY(4px);
+  }
+  &__desc {
+    transform: translateY(-4px);
+  }
+
+  &__wrapper.active &__asc.active,
+  &__wrapper.active &__desc.active {
+    color: #6d859e;
+    opacity: 1;
+  }
+}

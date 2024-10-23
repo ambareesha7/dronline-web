@@ -1,0 +1,102 @@
+.PatientRecords {
+  &__content {
+    background: #FFFFFF;
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 8px;
+  }
+
+  &__table {
+    width: 100%;
+
+    &-header {
+      &-cell {
+        font-size: 13px;
+        font-weight: 500;
+        color: #6d859e;
+        text-transform: uppercase;
+        line-height: 64px;
+        text-align: left;
+        padding: 0 12px;
+
+        &:first-of-type {
+          padding-left: 24px;
+        }
+      }
+    }
+  }
+
+  &__initializing {
+    padding: 32px 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+  }
+
+  &__load-more {
+    height: 36px;
+  }
+
+  &__no-results {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    font-size: 16px;
+    color: #9B9B9B;
+    letter-spacing: -.39px;
+    text-align: center;
+  }
+
+  &__tooltip {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 14px -1px rgba(66, 78, 91, 0.55);
+    padding: 24px;
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    width: 330px;
+    line-height: initial;
+    transition: opacity .22s ease-in-out;
+
+    &-text {
+      color: #292929;
+      background: transparent;
+      font-size: 15px;
+      line-height: 22px;
+      text-transform: none;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+
+    &-icon {
+      font-weight: 500;
+      font-size: 14px;
+      color: #23CE86;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      margin-left: 6px;
+
+      &:before {
+        content: '';
+        background-color: #ecfff3;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.TimelineMenu {
+  &__wrapper {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+
+  &__trigger {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #23CE86;
+    box-shadow: 0 4px 29px -1px #6CE5B2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    cursor: pointer;
+
+    & > i {
+      transform: rotate(0deg);
+      transition: transform .22s ease-in-out;
+    }
+
+    &.active > i {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__dropdown {
+    width: 245px;
+    position: absolute;
+    box-shadow: 0 4px 14px -1px rgba(66,78,91,0.55);
+    border-radius: 8px;
+    overflow: hidden;
+    right: 0;
+    bottom: 64px;
+    clip-path: circle(150% at calc(100% - 28px) calc(100% + 36px));
+
+    &-enter-active { animation: .6s circleClipPath; }
+    &-leave-active { animation: .4s circleClipPath reverse; }
+  }
+
+  &__action {
+    font-size: 14px;
+    color: #292929;
+    letter-spacing: -.5px;
+    padding: 0 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #FFF;
+    user-select: none;
+    transition: background-color .22s ease-in-out;
+
+    &:hover {
+      background-color: #F5F5F5;
+    }
+
+    &-icon {
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes circleClipPath {
+  0% { 
+    clip-path: circle(28px at calc(100% - 28px) calc(100% + 36px));
+    opacity: 0;
+  }
+  100% { 
+    clip-path: circle(150% at calc(100% - 28px) calc(100% + 36px));
+    opacity: 1;
+  }
+}

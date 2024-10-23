@@ -1,0 +1,119 @@
+.ProfileGeneralInfoEdit {
+  &__wrapper {
+    padding: 40px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__initializing {
+    padding: 24px 0;
+  }
+
+  &__file-uploader {
+    width: 220px !important;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+
+    &-upload-toggle {
+      opacity: 0;
+      background-color: rgba(0, 0, 0, .5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      transition: opacity .2s ease-in-out;
+
+      &-icon {
+        font-size: 40px;
+        padding-bottom: 12px;
+      }
+
+      &-label {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+
+    &.pending {
+      width: 104px;
+      height: 104px;
+    }
+
+    &:not(.pending) {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  &__file-uploader:hover &__avatar-upload-toggle,
+  &__file-uploader.unset &__avatar-upload-toggle {
+    opacity: 1;
+  }
+
+  &__name {
+    padding-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 24px;
+
+    &.pending {
+      color: #ED4855;
+    }
+
+    &:not(.pending) {
+      color: #4a4a4a;
+    }
+  }
+
+  &__categories {
+    padding-top: 8px;
+    color: #4496E9;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.19px;
+  }
+
+  &__contacts {
+    padding-top: 8px;
+    color: #4A4A4A;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  &__joined,
+  &__completed {
+    color: #88ABC4;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.17px;
+
+    &.pending {
+      padding-top: 8px;
+    }
+
+    &:not(.pending) {
+      padding-top: 16px;
+    }
+  }
+}

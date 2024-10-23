@@ -1,0 +1,41 @@
+.PatientsList {
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    color: #4A4A4A;
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 16px;
+  }
+
+  &__content {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding-bottom: 8px;
+  }
+
+  &__initializing {
+    padding: 32px 0;
+  }
+
+  &__no-results {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    font-size: 16px;
+    color: #9B9B9B;
+    letter-spacing: -.39px;
+    text-align: center;
+  }
+}

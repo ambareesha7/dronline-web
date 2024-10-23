@@ -1,0 +1,43 @@
+.FormSection {
+
+  &__wrapper {
+    padding: 12px 0 8px 0;
+    margin: 0 24px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: inherit;
+  }
+
+  &__edit {
+    height: 32px;
+    font-size: 15px;
+    font-weight: 600;
+    min-width: 128px;
+    line-height: 20px;
+    border: 1px solid #E7E8E9;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+  }
+
+  &__content {
+    margin-top: 12px;
+    max-width: 300px;
+
+    & .vertical:not(:last-of-type) {
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+
+  &__cancel, &__submit {
+    width: 50%;
+    height: 36px;
+  }
+}

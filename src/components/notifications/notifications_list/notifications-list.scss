@@ -1,0 +1,33 @@
+.NotificationsList {
+  &__content {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 40px;
+  }
+
+  &__title {
+    display: flex;
+
+    &-badge {
+      background-color: #ed4856;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+  }
+
+  &__no-results {
+    padding: 24px;
+    font-size: 16px;
+    color: #4A4A4A;
+    letter-spacing: -.39px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,94 @@
+.PatientInviteModal {
+  &__header {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #292929;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+    }
+    &-icon {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+  }
+
+  &__close {
+    &-container {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #292929;
+      cursor: pointer;
+      border-top-right-radius: 4px;
+      transition-property: background-color, color;
+      transition-duration: .22s;
+      transition-timing-function: ease-in-out;
+
+      &:hover {
+        background-color: #292929;
+        color: #FFF;
+      }
+    }
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__section {
+    padding-bottom: 24px;
+
+    & + & {
+      border-top: 1px solid #E1E1E1;
+      padding-top: 12px;
+    }
+
+    &-title {
+      margin: 12px 0;
+      font-size: 13px;
+      color: #6D859E;
+      text-transform: uppercase;
+    }
+  }
+
+  &__col-1 { width: calc(100% / 3); }
+  &__col-2 { width: calc(100% / 3 * 2); }
+
+  &__footer {
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, .20);
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      margin: 0;
+      height: 64px;
+    }
+
+    &-error {
+      padding: 8px 24px 0 24px;
+    }
+  }
+
+  &__cancel,
+  &__submit {
+    height: 36px;
+    width: 50%;
+    font-size: 15px;
+  }
+
+  &__cancel + &__submit {
+    margin-left: 8px;
+  }
+}

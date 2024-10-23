@@ -1,0 +1,211 @@
+.CalendarTimeslotPopup {
+
+  &__content {
+    position: fixed;
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px -1px rgba(66,78,91,0.55);
+    border-radius: 4px;
+    z-index: 1003;
+    width: 356px;
+    padding: 26px 24px 24px 24px;
+    transition: transform .16s ease-out, opacity .2s ease-out;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background-color: inherit;
+      width:  30px;
+      height: 30px;
+      transform: rotate(45deg);
+    }
+
+    &.right {
+      &:before {
+        border-bottom-left-radius: 4px;
+        left: -10px;
+      }
+    }
+
+    &.left {
+      &:before {
+        border-top-right-radius: 4px;
+        right: -10px;
+      }
+    }
+
+    &.top {
+      margin-top: -196px;
+      &:before {
+        bottom: 15px;
+      }
+    }
+
+    &.bottom {
+      margin-top: -68px;
+      &:before {
+        top: 68px;
+      }
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1002;
+    transition: opacity .22s ease-in;
+  }
+
+  &__section {
+    &:not(:last-of-type) {
+      padding-bottom: 24px;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__remove {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ED4856;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    flex-grow: 1;
+    height: 34px;
+    background-color: #F4F4F4;
+    color: #6F6F6F;
+    font-size: 15px;
+
+    &.active {
+      background-color: #4496E9;
+      color: #FFF;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    & + & {
+      margin-top: 12px;
+    }
+  }
+
+  &__col {
+    &:nth-child(1) {
+      width: 40%;
+    }
+    &::nth-child(2) {
+      width: 60%;
+    }
+  }
+
+  &__label {
+    font-size: 15px;
+    color: #5D6C7C;
+    display: flex;
+    align-items: center;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    color: #4496E9;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+
+    &-dropdown {
+      position: absolute;
+      z-index: 1;
+      background: #FFFFFF;
+      box-shadow: 0 4px 14px -1px rgba(66, 78, 91, .55);
+      border-radius: 4px;
+      width: 170px;
+      max-height: 152px;
+      overflow-y: scroll;
+      margin-left: -85px;
+      transition: transform .16s ease-out, opacity .2s ease-out;
+    }
+
+    &-option {
+      font-size: 14px;
+      color: #292929;
+      line-height: 18px;
+      padding: 16px;
+      cursor: pointer;
+      transition: background-color .22s ease-in-out;
+
+      &:hover {
+        background-color: #F5F5F5;
+      }
+    }
+
+    &-dropdown.start &-option {
+      &:last-of-type { display: none; }
+    }
+
+    &-dropdown.end &-option {
+      &:first-of-type { display: none; }
+    }
+  }
+
+  &__start,
+  &__end {
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    &.active {
+      background-color: #F5F5F5;
+      border-color: #E7E8E9;
+    }
+  }
+
+  &__divider {
+    margin: 0 4px;
+  }
+
+  &__date {
+    cursor: pointer;
+    padding: 4px;
+    color: #292929;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+
+    &:focus {
+      background-color: #F5F5F5;
+      border-color: #E7E8E9;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__action {
+    width: 50%;
+    height: 36px;
+  }
+}

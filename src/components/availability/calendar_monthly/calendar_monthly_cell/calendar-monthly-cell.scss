@@ -1,0 +1,98 @@
+.CalendarMonthlyCell {
+  &__wrapper {
+    padding: 3px;
+    border-top: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-last-child(-n+7) {
+      border-bottom: 1px solid #e1e1e1;
+    }
+    &:nth-child(7n) {
+      border-right: 1px solid #e1e1e1;
+    }
+  }
+
+  &__title {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+    letter-spacing: 0.18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #6d859e;
+
+    &.current {
+      color: #4496e9;
+    }
+
+    &-date {
+      margin: 7px 0 6px;
+    }
+
+    &-day + &-date {
+      margin: 0;
+    }
+  }
+
+  &__presentation {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4496e9;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transition: transform .4s, opacity .4s;
+    
+    &.top {
+      transform: translate(0, -100%);
+    }
+    &.right {
+      transform: translate(100%, 0);
+    }
+    &.bottom {
+      transform: translate(0, 100%);
+    }
+    &.left {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  &__wrapper:hover &__presentation {
+    opacity: 1;
+    transform: translate(0);
+    transition: transform .4s, opacity 0;
+  }
+
+  &__content {
+    padding-top: 5px;
+  }
+
+  &__timeslots-group {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-align: center;
+    padding: 1px;
+
+    & + & {
+      margin-top: 2px;
+    }
+
+    &.free { background-color: #4496e9; }
+    &.pending { background-color: #ffb244; }
+    &.provided { background-color: #23ce86; }
+  }
+}

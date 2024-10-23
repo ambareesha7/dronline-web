@@ -1,0 +1,118 @@
+.TimelineAssignMedicationsForm {
+  &__wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: transform 0.16s ease-out, opacity 0.2s ease-out;
+  }
+
+  &__header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 24px;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1877da;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+  }
+
+  &__close {
+    width: 64px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #292929;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 24px;
+    margin: 64px 0;
+    height: calc(100% - 128px);
+    overflow-y: scroll;
+  }
+
+  &__address {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #e1e1e1;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      font-size: 13px;
+      color: #6d859e;
+      text-transform: uppercase;
+    }
+  }
+
+  &__footer {
+    min-height: 64px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      margin: 0;
+      height: 64px;
+    }
+
+    &-error {
+      margin: 4px 24px;
+    }
+  }
+
+  &__cancel,
+  &__submit {
+    height: 36px;
+    width: 50%;
+    font-size: 15px;
+  }
+
+  &__cancel + &__submit {
+    margin-left: 8px;
+  }
+
+  &__add-new-medication {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #1877da;
+    cursor: pointer;
+
+    &-icon {
+      padding: 0 3px;
+      font-size: 12px;
+    }
+  }
+}

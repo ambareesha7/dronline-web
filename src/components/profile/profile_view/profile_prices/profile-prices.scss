@@ -1,0 +1,45 @@
+.ProfilePrices {
+    .form-row {
+        padding-top: 0;
+    }
+
+    &__wrapper {
+      padding: 15px 24px 24px 24px;
+    }
+  
+    &__section {
+      padding: 16px 0 24px 0;
+  
+      &-title {
+        color: #6D859E;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+  
+      &-initializing {
+        padding: 24px 0;
+      }
+  
+      &-row {
+        display: flex;
+        align-items: center;
+        padding-top: 16px;
+  
+        &-label {
+          font-size: 15px;
+          color: #5d6c7c;
+          margin-right: 6px;
+          width: 30%;
+        }
+  
+        &-value {
+          font-size: 15px;
+          color: rgb(35, 206, 134);;
+          margin-left: 6px;
+          width: 70%;
+        }
+      }
+    }
+  }
+  

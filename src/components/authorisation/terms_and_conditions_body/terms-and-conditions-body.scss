@@ -1,0 +1,51 @@
+.TermsAndConditionsBody {
+  &__wrapper {
+    .blue,
+    a {
+      color: #3290D5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    h3 {
+      color: #4A4A4A;
+      font-size: 24px;
+      font-weight: 500;
+      padding: 16px 12px;
+    }
+
+    h4 {
+      color: #4A4A4A;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 22px 0;
+    }
+
+    p {
+      padding-bottom: 6px;
+      color: #3B4A58;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 40px;
+
+      & + h3 {
+        margin-top: 40px;
+      }
+    }
+  }
+}
